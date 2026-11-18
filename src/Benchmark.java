@@ -1,6 +1,6 @@
 public class Benchmark {
 
-    public static long medir(Runnable accion, String nomnbre, String sample) {
+    public static Results medir(Runnable accion, String nombre, String sample) {
         //System.out.println("Funcion" + nomnbre);
         //Tiempo actual
         long tA = System.nanoTime();
@@ -9,8 +9,7 @@ public class Benchmark {
         //Tiempo final 
         long tF = System.nanoTime();
         //Retoranar el tiempo de duracion\
-        Results results = new Results(nomnbre, (tF - tA), sample);
-
+        Results results = new Results(nombre, (tF - tA), sample);
         return results;
     }
     

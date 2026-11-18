@@ -34,6 +34,11 @@ public class Results {
         this.sample = sample;
     }
 
+    @Override 
+    public String toString() {
+        long segundos = duration / 10;
+        return "Funcion: " + funcionName + ", Duracion: " + segundos + " segundos, Sample: " + sample;     
+    }
 
 
     

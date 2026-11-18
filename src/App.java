@@ -2,21 +2,20 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-      Generador g = new Generador();
-      Benchmark b = new Benchmark();
+        Generador g = new Generador();
+        Benchmark b = new Benchmark();
 
-      List<Integer> list = g.generate(size: 100);
-      System.out.println(list);
+        List<Integer> list = g.generate(100);
+        System.out.println(list);
 
-      Results benGenList = b.medir(
-          () -> g.generate(size: 100)
-         nombre: "Generacion de listado", sample: "100");
+        Results benGenList = b.medir(
+            () -> g.generate(100),
+            "Generacion de listado", "100");
+
+        System.out.println(benGenList);
       
-         System.out.println("Funcion: " + benGenList.getFuncionName());
+        
       
-
-
-
 
     /*  
       long nanoTime=System.nanoTime();
